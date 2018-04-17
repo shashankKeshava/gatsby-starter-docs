@@ -9,6 +9,7 @@ const theme = {
   errorRed: "#FF6666",
   codeEditBlue: "#2973b7",
   codeEditGreen: "#42b983",
+  white:"#ffffff",
 
   // content width:
   contentWidthLaptop: "850px",

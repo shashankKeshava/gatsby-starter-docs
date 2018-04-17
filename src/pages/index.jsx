@@ -12,25 +12,25 @@ class Index extends React.Component {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <div className="index-container">
-        <Helmet title={config.siteTitle} />
-        <SEO postEdges={postEdges} />
+        <Helmet title={config.siteTitle}/>
+        <SEO postEdges={postEdges}/>
         <main>
           <IndexHeadContainer>
             <Navigation />
             <Hero>
-              <img src={config.siteLogo} width="150px" />
+              <img src={config.siteLogo} width="150px"/>
               <h1>{config.siteTitle}</h1>
               <h4>{config.siteDescription}</h4>
             </Hero>
+            <BodyContainer>
+              <h2>A Gatsby Template for Content</h2>
+              <p>
+                Made for modern documentation sites. Table of Contents automatically generated
+                from markdown files.{" "}
+              </p>
+              <CtaButton to={"/lesson-one"}>See Your First Post</CtaButton>
+            </BodyContainer>
           </IndexHeadContainer>
-          <BodyContainer>
-            <h2>A Gatsby Template for Content</h2>
-            <p>
-              Made for modern documentation sites. Table of Contents
-              automatically generated from markdown files.{" "}
-            </p>
-            <CtaButton to={"/lesson-one"}>See Your First Post</CtaButton>
-          </BodyContainer>
         </main>
       </div>
     );
@@ -39,27 +39,27 @@ class Index extends React.Component {
 
 export default Index;
 
-const IndexHeadContainer = styled.div`
-  background: ${props => props.theme.brand};
+const IndexHeadContainer = styled.div `
+  background: linear-gradient(to left,#c51818 ,#03488e);
   padding: ${props => props.theme.sitePadding};
   text-align: center;
 `;
 
-const Hero = styled.div`
+const Hero = styled.div `
   padding: 50px 0;
   & > h1 {
     font-weight: 600;
   }
 `;
 
-const BodyContainer = styled.div`
+const BodyContainer = styled.div `
   padding: ${props => props.theme.sitePadding};
   max-width: ${props => props.theme.contentWidthLaptop};
   margin: 0 auto;
 `;
 
 /* eslint no-undef: "off"*/
-export const pageQuery = graphql`
+export const pageQuery = graphql `
   query IndexQuery {
     allMarkdownRemark(
       limit: 2000
