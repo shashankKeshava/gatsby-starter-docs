@@ -47,6 +47,7 @@ For a more complicated exmample, you can look at the repo for the site I built t
 * React Icons
 * Configured to auto generate documentation 'Table of Contents'
 * You can also have blog posts.
+* SASS/SCSS Supported
 
 ### Updates
 
