@@ -7,6 +7,8 @@ import config from "../../data/SiteConfig";
 import CtaButton from "../components/CtaButton";
 import Navigation from "../components/Layout/Navigation";
 
+import "./index.scss"
+
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
@@ -40,7 +42,7 @@ class Index extends React.Component {
 export default Index;
 
 const IndexHeadContainer = styled.div `
-  background: linear-gradient(to left,#c51818 ,#03488e);
+  background: linear-gradient(to bottom,#03488e 28%,#c51818 98%);
   padding: ${props => props.theme.sitePadding};
   text-align: center;
 `;
